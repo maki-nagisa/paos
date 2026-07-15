@@ -1,0 +1,25 @@
+{
+  "moduleId": "templates",
+  "title": "Templates Module",
+  "purpose": "Stable output contracts for PAOS artifacts",
+  "scope": "templates",
+  "dependsOn": [
+    "core"
+  ],
+  "defaultLoad": false,
+  "status": "stable",
+  "entryFile": "templates/Templates-Module.md",
+  "submodules": [
+    "templates/manifests/Templates-Manifests.md",
+    "templates/modules/Templates-Modules.md",
+    "templates/reports/Templates-Reports.md",
+    "templates/roadmap/Templates-Roadmap.md"
+  ],
+  "canonicalFiles": [
+    "templates/Templates-Module.md",
+    "templates/manifests/Templates-Manifests.md",
+    "templates/modules/Templates-Modules.md",
+    "templates/reports/Templates-Reports.md",
+    "templates/roadmap/Templates-Roadmap.md"
+  ]
+}

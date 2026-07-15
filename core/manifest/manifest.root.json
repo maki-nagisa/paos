@@ -1,0 +1,112 @@
+{
+  "systemId": "paos",
+  "systemName": "Personal AI Operating System",
+  "version": "1.0.0",
+  "defaultEntry": "README.md",
+  "directoryEntry": "core/PAOS-Directory.md",
+  "loadOrder": [
+    "README.md",
+    "Bootstrap.md",
+    "OperatingRules.md",
+    "CurrentContext.md",
+    "state/state.index.md",
+    "state/current/Status.md",
+    "state/current/Current-Task.md",
+    "core/manifest/manifest.root.json",
+    "core/PAOS-Architecture.md",
+    "core/PAOS-Directory.md"
+  ],
+  "modules": [
+    {
+      "moduleId": "core",
+      "path": "core",
+      "manifest": "core/manifest/manifest.root.json",
+      "moduleFile": "core/Core-Module.md",
+      "purpose": "System rules and contracts",
+      "defaultLoad": true,
+      "status": "stable"
+    },
+    {
+      "moduleId": "state",
+      "path": "state",
+      "manifest": "state/manifest.manifest.json",
+      "moduleFile": "state/State-Module.md",
+      "purpose": "Current active state",
+      "defaultLoad": true,
+      "status": "stable"
+    },
+    {
+      "moduleId": "knowledge",
+      "path": "knowledge",
+      "manifest": "knowledge/manifest.manifest.json",
+      "moduleFile": "knowledge/Knowledge-Module.md",
+      "purpose": "Durable reusable knowledge",
+      "defaultLoad": false,
+      "status": "stable"
+    },
+    {
+      "moduleId": "templates",
+      "path": "templates",
+      "manifest": "templates/manifest.manifest.json",
+      "moduleFile": "templates/Templates-Module.md",
+      "purpose": "Stable output contracts",
+      "defaultLoad": false,
+      "status": "stable"
+    },
+    {
+      "moduleId": "reports",
+      "path": "reports",
+      "manifest": "reports/manifest.manifest.json",
+      "moduleFile": "reports/Reports-Module.md",
+      "purpose": "Bounded synthesized outputs",
+      "defaultLoad": false,
+      "status": "stable"
+    },
+    {
+      "moduleId": "roadmap",
+      "path": "roadmap",
+      "manifest": "roadmap/manifest.manifest.json",
+      "moduleFile": "roadmap/Roadmap-Module.md",
+      "purpose": "Planned evolution",
+      "defaultLoad": false,
+      "status": "stable"
+    },
+    {
+      "moduleId": "archive",
+      "path": "archive",
+      "manifest": "archive/manifest.manifest.json",
+      "moduleFile": "archive/Archive-Module.md",
+      "purpose": "Inactive historical material",
+      "defaultLoad": false,
+      "status": "stable"
+    }
+  ],
+  "referenceRules": {
+    "preferManifestIds": true,
+    "allowArchiveAsDefaultInput": false,
+    "allowCanonicalDuplication": false,
+    "requireManifestRegistrationForCanonicalFiles": true
+  },
+  "namingRules": {
+    "directories": "kebab-case",
+    "manifests": "manifest.<scope>.json",
+    "machineFiles": "snake_case.json",
+    "canonicalDocs": "Pascal-Topic.md",
+    "indexes": "<module>.index.md"
+  },
+  "statusPolicy": {
+    "stable": "canonical and structurally governed",
+    "active": "current and loadable",
+    "draft": "not yet canonical",
+    "archived": "inactive and not default-load"
+  },
+  "archivePolicy": {
+    "currentPreferred": true,
+    "archiveByDefaultExcluded": true
+  },
+  "directoryRules": {
+    "topLevelModulesFixed": true,
+    "directorySourceOfTruth": "core/PAOS-Directory.md",
+    "newTopLevelModuleRequiresApproval": true
+  }
+}

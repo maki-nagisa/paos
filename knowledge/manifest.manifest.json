@@ -1,0 +1,46 @@
+{
+  "moduleId": "knowledge",
+  "title": "Knowledge Module",
+  "purpose": "Durable reusable knowledge for PAOS",
+  "scope": "knowledge",
+  "dependsOn": [
+    "core",
+    "state"
+  ],
+  "defaultLoad": false,
+  "status": "stable",
+  "entryFile": "knowledge/Knowledge-Module.md",
+  "submodules": [
+    "knowledge/domains/Knowledge-Domains.md",
+    "knowledge/context/Knowledge-Context.md",
+    "knowledge/memory/Knowledge-Memory.md",
+    "knowledge/storage/Knowledge-Storage.md",
+    "knowledge/systems/Knowledge-Systems.md",
+    "knowledge/workflows/Knowledge-Workflows.md",
+    "knowledge/patterns/Knowledge-Patterns.md",
+    "knowledge/solutions/Knowledge-Solutions.md"
+  ],
+  "canonicalFiles": [
+    "knowledge/Knowledge-Module.md",
+    "knowledge/domains/Knowledge-Domains.md",
+    "knowledge/context/Knowledge-Context.md",
+    "knowledge/context/Context-Layers.md",
+    "knowledge/context/Context-Assembly.md",
+    "knowledge/context/Context-Rules.md",
+    "knowledge/memory/Knowledge-Memory.md",
+    "knowledge/memory/Memory-Taxonomy.md",
+    "knowledge/memory/Memory-Rules.md",
+    "knowledge/memory/Memory-Retrieval.md",
+    "knowledge/storage/Knowledge-Storage.md",
+    "knowledge/storage/Storage-Layers.md",
+    "knowledge/storage/Storage-Rules.md",
+    "knowledge/storage/Storage-Lifecycle.md",
+    "knowledge/systems/Knowledge-Systems.md",
+    "knowledge/workflows/Knowledge-Workflows.md",
+    "knowledge/workflows/Workflow-Automation.md",
+    "knowledge/workflows/Automation-Lifecycle.md",
+    "knowledge/workflows/Automation-Acceptance.md",
+    "knowledge/patterns/Knowledge-Patterns.md",
+    "knowledge/solutions/Knowledge-Solutions.md"
+  ]
+}

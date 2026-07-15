@@ -1,0 +1,24 @@
+{
+  "moduleId": "roadmap",
+  "title": "Roadmap Module",
+  "purpose": "Planned structural evolution for PAOS",
+  "scope": "roadmap",
+  "dependsOn": [
+    "core",
+    "state",
+    "knowledge"
+  ],
+  "defaultLoad": false,
+  "status": "stable",
+  "entryFile": "roadmap/roadmap.index.md",
+  "submodules": [
+    "roadmap/horizons/Roadmap-Horizons.md",
+    "roadmap/initiatives/Roadmap-Initiatives.md"
+  ],
+  "canonicalFiles": [
+    "roadmap/Roadmap-Module.md",
+    "roadmap/roadmap.index.md",
+    "roadmap/horizons/Roadmap-Horizons.md",
+    "roadmap/initiatives/Roadmap-Initiatives.md"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "systemId": "paos-bootstrap-layer",
+  "systemName": "PAOS Bootstrap Layer",
+  "version": "1.0.0",
+  "updatedAt": "2026-07-15",
+  "defaultEntry": "README.md",
+  "loadOrder": [
+    "README.md",
+    "Bootstrap.md",
+    "OperatingRules.md",
+    "CurrentContext.md",
+    "bootstrap/README.md",
+    "config/machine.example.yaml",
+    "core/manifest/manifest.root.json"
+  ],
+  "bootstrapFiles": [
+    {
+      "fileId": "paos.readme",
+      "path": "README.md",
+      "role": "single entrypoint",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.bootstrap",
+      "path": "Bootstrap.md",
+      "role": "task bootstrap protocol",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.operating-rules",
+      "path": "OperatingRules.md",
+      "role": "runtime rule surface",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.current-context",
+      "path": "CurrentContext.md",
+      "role": "bootstrap loading context",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.lifecycle",
+      "path": "Lifecycle.md",
+      "role": "lifecycle state surface",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.roadmap",
+      "path": "Roadmap.md",
+      "role": "bootstrap maintenance route",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.manifest",
+      "path": "Manifest.json",
+      "role": "bootstrap index",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.bootstrap-device-rules",
+      "path": "bootstrap/README.md",
+      "role": "cross-device bootstrap rules",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.machine-config-template",
+      "path": "config/machine.example.yaml",
+      "role": "device-local config template",
+      "status": "active",
+      "version": "1.0.0"
+    },
+    {
+      "fileId": "paos.active-writer",
+      "path": "state/current/Active-Writer.yaml",
+      "role": "single-writer coordination state",
+      "status": "active",
+      "version": "1.0.0"
+    }
+  ],
+  "modules": [
+    {
+      "moduleId": "core",
+      "path": "core",
+      "manifest": "core/manifest/manifest.root.json",
+      "entry": "core/PAOS-Architecture.md",
+      "dependsOn": [],
+      "referencedBy": [
+        "state",
+        "knowledge",
+        "templates",
+        "reports",
+        "roadmap"
+      ],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "state",
+      "path": "state",
+      "manifest": "state/manifest.manifest.json",
+      "entry": "state/state.index.md",
+      "dependsOn": [
+        "core"
+      ],
+      "referencedBy": [
+        "knowledge",
+        "roadmap",
+        "reports"
+      ],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "knowledge",
+      "path": "knowledge",
+      "manifest": "knowledge/manifest.manifest.json",
+      "entry": "knowledge/Knowledge-Module.md",
+      "dependsOn": [
+        "core",
+        "state"
+      ],
+      "referencedBy": [
+        "reports",
+        "roadmap"
+      ],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "templates",
+      "path": "templates",
+      "manifest": "templates/manifest.manifest.json",
+      "entry": "templates/Templates-Module.md",
+      "dependsOn": [
+        "core"
+      ],
+      "referencedBy": [
+        "reports"
+      ],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "reports",
+      "path": "reports",
+      "manifest": "reports/manifest.manifest.json",
+      "entry": "reports/indexes/reports.index.md",
+      "dependsOn": [
+        "core",
+        "state",
+        "knowledge",
+        "templates"
+      ],
+      "referencedBy": [],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "roadmap",
+      "path": "roadmap",
+      "manifest": "roadmap/manifest.manifest.json",
+      "entry": "roadmap/roadmap.index.md",
+      "dependsOn": [
+        "core",
+        "state",
+        "knowledge"
+      ],
+      "referencedBy": [],
+      "status": "stable",
+      "version": "1.0.0"
+    },
+    {
+      "moduleId": "archive",
+      "path": "archive",
+      "manifest": "archive/manifest.manifest.json",
+      "entry": "archive/Archive-Module.md",
+      "dependsOn": [],
+      "referencedBy": [],
+      "status": "stable",
+      "version": "1.0.0"
+    }
+  ],
+  "referenceRules": {
+    "defaultReadIsBounded": true,
+    "fullTreeLoadForbiddenByDefault": true,
+    "preferCanonicalUpdateOverNewFile": true,
+    "stableModuleBodiesRequireControlledMaintenance": true
+  },
+  "namingRules": {
+    "bootstrapDocs": "Pascal-Topic.md or fixed root canonical names",
+    "machineFiles": "snake_case.json",
+    "moduleIds": "dot.case",
+    "pathsAreRelativeTo": "paos/"
+  },
+  "statusPolicy": {
+    "active": "currently used by the bootstrap layer or active maintenance flow",
+    "stable": "canonical contract accepted for maintenance-first operation",
+    "archive": "inactive and non-default context surface"
+  },
+  "archivePolicy": {
+    "defaultLoad": false,
+    "requiresExplicitNeed": true,
+    "usedFor": [
+      "retired material",
+      "superseded outputs",
+      "non-default historical lookup"
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+schema_version: 1
+
+workspace_root: "<LOCAL_WORKSPACE_ROOT>"
+projects_root: "<LOCAL_PROJECTS_ROOT>"
+archive_root: "<LOCAL_ARCHIVE_ROOT>"
+backup_root: "<LOCAL_BACKUP_ROOT>"
+
+device:
+  id: "<DEVICE_ID>"
+  role: "primary|secondary|portable"

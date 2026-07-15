@@ -1,0 +1,23 @@
+{
+  "moduleId": "archive",
+  "title": "Archive Module",
+  "purpose": "Inactive historical storage outside default PAOS context",
+  "scope": "archive",
+  "dependsOn": [
+    "core"
+  ],
+  "defaultLoad": false,
+  "status": "stable",
+  "entryFile": "archive/Archive-Module.md",
+  "submodules": [
+    "archive/knowledge/Archive-Knowledge.md",
+    "archive/reports/Archive-Reports.md",
+    "archive/roadmap/Archive-Roadmap.md"
+  ],
+  "canonicalFiles": [
+    "archive/Archive-Module.md",
+    "archive/knowledge/Archive-Knowledge.md",
+    "archive/reports/Archive-Reports.md",
+    "archive/roadmap/Archive-Roadmap.md"
+  ]
+}

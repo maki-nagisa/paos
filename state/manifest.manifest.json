@@ -1,0 +1,23 @@
+{
+  "moduleId": "state",
+  "title": "State Module",
+  "purpose": "Current active truth for PAOS default loading",
+  "scope": "state",
+  "dependsOn": [
+    "core"
+  ],
+  "defaultLoad": true,
+  "status": "stable",
+  "entryFile": "state/state.index.md",
+  "defaultFiles": [
+    "state/state.index.md",
+    "state/current/Status.md",
+    "state/current/Current-Task.md"
+  ],
+  "canonicalFiles": [
+    "state/State-Module.md",
+    "state/state.index.md",
+    "state/current/Status.md",
+    "state/current/Current-Task.md"
+  ]
+}

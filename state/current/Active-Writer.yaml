@@ -1,0 +1,7 @@
+schema_version: 1
+
+active_writer:
+  device_id: null
+  task_id: null
+  acquired_at: null
+  mode: "idle"

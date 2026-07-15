@@ -1,0 +1,25 @@
+{
+  "moduleId": "reports",
+  "title": "Reports Module",
+  "purpose": "Bounded synthesized outputs for PAOS",
+  "scope": "reports",
+  "dependsOn": [
+    "core",
+    "state",
+    "knowledge",
+    "templates"
+  ],
+  "defaultLoad": false,
+  "status": "stable",
+  "entryFile": "reports/indexes/reports.index.md",
+  "submodules": [
+    "reports/active/Reports-Active.md",
+    "reports/snapshots/Reports-Snapshots.md"
+  ],
+  "canonicalFiles": [
+    "reports/Reports-Module.md",
+    "reports/indexes/reports.index.md",
+    "reports/active/Reports-Active.md",
+    "reports/snapshots/Reports-Snapshots.md"
+  ]
+}
