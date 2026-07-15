@@ -3,6 +3,56 @@
 `PAOS` is the bootstrap entrypoint for `Personal AI Operating System` inside Codex.
 It provides the single startup entry into the existing stable module set.
 
+## Quick Start On A New Windows Device
+
+Install Git, GitHub CLI, and Codex first. Then run the following in PowerShell:
+
+```powershell
+$ErrorActionPreference = 'Stop'
+gh auth login
+New-Item -ItemType Directory -Force -Path 'D:\codex' | Out-Null
+Set-Location 'D:\codex'
+gh repo clone maki-nagisa/paos paos
+Set-Location '.\paos'
+Copy-Item '.\config\machine.example.yaml' '.\config\machine.local.yaml'
+```
+
+Edit `config/machine.local.yaml` for the local device before starting write work:
+
+- `workspace_root`
+- `projects_root`
+- `archive_root`
+- `backup_root`
+- `device.id`
+- `device.role`
+
+Run the first sync and confirm the clone is clean:
+
+```powershell
+$ErrorActionPreference = 'Stop'
+git pull --ff-only
+git status
+```
+
+Start in read-only mode until `state/current/Active-Writer.yaml` is `idle` or explicitly assigned to this device. Full setup, handoff, sync, backup, and recovery instructions are in [`portability/`](portability/).
+
+## Operating Rules
+
+- This repository contains portable PAOS architecture, formal state, active reports, manifests, and runbooks.
+- `config/machine.local.yaml` is device-local and intentionally excluded from Git.
+- Never commit credentials, tokens, `.env` files, private keys, runtime logs, caches, temp files, indexes, or local databases.
+- Pull before editing. Only one device may write `Current-Task`, `progress`, and active reports at a time.
+- Before switching devices, commit and push the approved work, then return `state/current/Active-Writer.yaml` to `idle`.
+
+## Documentation
+
+- [Device onboarding](portability/Device-Onboarding.md)
+- [Device offboarding](portability/Device-Offboarding.md)
+- [Git sync](portability/Git-Sync-Runbook.md)
+- [Git recovery](portability/Git-Recovery-Runbook.md)
+- [Backup strategy](portability/Backup-Strategy.md)
+- [Migration runbook](portability/Migration-Runbook.md)
+
 ## Purpose
 
 - provide one unambiguous entrypoint for `PAOS`
