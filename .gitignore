@@ -35,6 +35,8 @@ runtime/tmp/
 *.sqlite3
 indexes/
 runtime/indexes/
+!reports/indexes/
+!reports/indexes/*.md
 
 # Python
 __pycache__/
