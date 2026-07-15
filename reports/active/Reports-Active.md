@@ -46,6 +46,7 @@ Remove a report from the active registry when a stronger replacement exists or w
 | `paos.codex-c-drive-growth.readonly-analysis` | `PAOS Codex C Drive Growth Read-Only Analysis Report` | `analysis-report` | current bounded evidence surface for first-pass Codex-related `C:` growth analysis and next-step recommendation |
 | `paos.codex-c-drive-cleanup.decision` | `PAOS Codex C Drive Cleanup Decision Report` | `analysis-report` | current bounded decision surface for the first executable Codex-related `C:` cleanup wave |
 | `paos.codex-c-drive-tmp-cleanup.execution` | `PAOS Codex C Drive Tmp Cleanup Execution Report` | `execution-report` | current bounded execution surface for the completed first-wave `.codex\tmp` residue cleanup |
+| `paos.git-migration.execution` | `PAOS Git Migration Execution Report` | `execution-report` | current bounded execution surface for private Git portability, onboarding, and fresh-clone validation |
 
 ## Registry Rule
 

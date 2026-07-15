@@ -30,6 +30,7 @@
 - closed the root bootstrap-layer metadata gap by aligning `Manifest.json` with the architecture-required field set used by the root manifest
 - established `reports/active/PAOS-Phase-2-Review-Report.md` as the compact architecture, bootstrap, lifecycle, roadmap, and consistency audit surface for this phase
 - completed root core refinement by reducing `README.md`, tightening `Manifest.json`, and removing residual task-guidance drift from `CurrentContext.md`
+- completed private Git portability enablement for `E:\codex\paos`, including device-local config templating, active-writer coordination, onboarding runbooks, and fresh-clone validation
 
 #### Deprecated
 
